@@ -21,7 +21,12 @@ class TestCase(unittest.TestCase):
             prev = fibonacci_impl()(rnd - 1)
             current = fibonacci_impl()(rnd)
             next_el = fibonacci_impl()(rnd + 1)
-            self.assertEqual(prev + current, next_el, msg=f"fib of {next_el} should be {prev} + {current}")
+            self.assertEqual(
+                prev + current,
+                next_el,
+                msg=f"fib of {next_el} should be {prev} + {current}",
+            )
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
